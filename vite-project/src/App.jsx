@@ -1,10 +1,22 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'  
+import { FaFacebook, FaYoutube } from "react-icons/fa";
 import './App.css'
 import Card from './components/Card.jsx'
 import Data from './data.json'
 import List from "./components/UniqueList/List.jsx"
+import Card1 from "./components/Card1.jsx"
+import Bootstrap from './React_Bootstrap/Bootstrap.jsx';
+import Conditional_Rendering from './Conditional_Rendering/index.jsx'
+import Event_Handler_onChangeindex from './Event_Handler_onChange/index.jsx'
+import Hooks_useState from './Hooks_useState/classComponent.jsx'
+import Hooks_useState2 from './Hooks_useState/useState.jsx'
+
+
+function Welcome (){
+  return <h4>React Component under the hood</h4>;
+}
 
 
 function App() {
@@ -39,6 +51,7 @@ function App() {
 
   return (
     <>
+      {/*Logo start*/}
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -47,14 +60,19 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-
+      {/*Logo end*/}
+   
       <h1>Vite + React</h1>
 
-      <div className="card">
+      {/*Count start*/}
+
+      <div className="count">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>  
       </div>
+
+      {/*Count end*/}
 
           <div>
             <h1 className='headingStyle'>Welcome React Practice</h1>
@@ -88,7 +106,52 @@ function App() {
   ))}
       </div>
       
-          
+                {/*Class component start*/}
+                <Card1 name = "Hello, this is class component"/>
+                {/*Class component end*/}
+
+                
+                {/*React component under the hood start*/}
+                <div>
+                  <Welcome />
+                </div>
+                {/*React component under the hood end*/}
+
+
+              {/*React Icon start*/}
+              <div>
+                <h2>React Icon</h2>
+                <span>
+                  <FaFacebook className='icon'/>
+                </span>
+                <span>
+                  <FaYoutube className='icon' />
+                </span>
+              </div>
+
+                  {/*React with Bootstrap start*/}
+                  <div>
+                    <h2>Bootstrap with React</h2>
+                    <Bootstrap />
+                  </div>
+
+            {/*Conditional Rendaring start*/}
+            <div>
+            <h3>Conditional  Rendering</h3>
+              <Conditional_Rendering />
+            </div>
+
+        {/*EventHandler Onchange start*/}
+        <h4>Event Handler onChange</h4>
+
+          <Event_Handler_onChangeindex />
+
+
+          {/*useState and Class component start*/}
+          <h4>useState and Class component start</h4>
+
+          <Hooks_useState />
+          <Hooks_useState2 />
 
 
     </>
