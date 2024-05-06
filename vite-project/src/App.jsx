@@ -12,6 +12,8 @@ import Conditional_Rendering from './Conditional_Rendering/index.jsx'
 import Event_Handler_onChangeindex from './Event_Handler_onChange/index.jsx'
 import Hooks_useState from './Hooks_useState/classComponent.jsx'
 import Hooks_useState2 from './Hooks_useState/useState.jsx'
+import UpdateUseState from './Hooks_useState/UpdateUseState.jsx';
+
 
 
 function Welcome (){
@@ -152,6 +154,12 @@ function App() {
 
           <Hooks_useState />
           <Hooks_useState2 />
+
+          {/*UpdateUseState start*/}
+          <h4>Update useState</h4>
+          <UpdateUseState />
+
+             
 
 
     </>
