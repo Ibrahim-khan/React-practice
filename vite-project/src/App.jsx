@@ -8,12 +8,13 @@ import Data from './data.json'
 import List from "./components/UniqueList/List.jsx"
 import Card1 from "./components/Card1.jsx"
 import Bootstrap from './React_Bootstrap/Bootstrap.jsx';
-import Conditional_Rendering from './Conditional_Rendering/index.jsx'
-import Event_Handler_onChangeindex from './Event_Handler_onChange/index.jsx'
-import Hooks_useState from './Hooks_useState/classComponent.jsx'
-import Hooks_useState2 from './Hooks_useState/useState.jsx'
+import Conditional_Rendering from './Conditional_Rendering/index.jsx';
+import Event_Handler_onChangeindex from './Event_Handler_onChange/index.jsx';
+import Hooks_useState from './Hooks_useState/classComponent.jsx';
+import Hooks_useState2 from './Hooks_useState/useState.jsx';
 import UpdateUseState from './Hooks_useState/UpdateUseState.jsx';
-
+import Form from './components/Form/Form.jsx';
+import Child from './components/State_Lifting/Child.jsx';
 
 
 function Welcome (){
@@ -50,6 +51,13 @@ function App() {
       ]
     }
   ]
+
+  {/*Parent to child using (props)*/}
+  const  dataFromParent = "I am from parent (app.jsx)";
+
+  const handleChildData = (childData) => {
+      console.log(childData);
+  }
 
   return (
     <>
@@ -159,6 +167,16 @@ function App() {
           <h4>Update useState</h4>
           <UpdateUseState />
 
+          {/*FORM start*/}
+          <Form />
+
+          {/*bottom to top(child to parent) start*/}
+          <Child dataFromParent = {dataFromParent} onChildData={handleChildData}/>
+
+
+          {/* App.jsx -> Components -> Home.jsx (todos = 
+            ["item1", "item2"]) -> Todos -> Todo 
+            Components -> NewTodo */}
              
 
 
