@@ -14,6 +14,9 @@ import Hooks_useState2 from './Hooks_useState/useState.jsx';
 import UpdateUseState from './Hooks_useState/UpdateUseState.jsx';
 import Form from './components/Form/Form.jsx';
 import Child from './components/State_Lifting/Child.jsx';
+import SignUp from './components/SignUp/SignUp.jsx';
+import Toggle from './components/Toggole/Toggole.jsx';
+import FAQS from './components/FAQ/FAQS.jsx';
 
 
 function Welcome (){
@@ -173,6 +176,18 @@ function App() {
           {/* App.jsx -> Components -> Home.jsx (todos = 
             ["item1", "item2"]) -> Todos -> Todo 
             Components -> NewTodo */}
+
+
+    {/*SignUP start*/}
+    <SignUp />
+
+              {/*Toggle start*/}
+              <h1>Toggle</h1> 
+              <Toggle />
+
+              {/*FAQ Start*/}
+              <h1>FAQ</h1>
+              <FAQS />
              
 
 
