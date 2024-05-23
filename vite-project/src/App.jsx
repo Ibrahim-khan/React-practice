@@ -17,6 +17,9 @@ import Child from './components/State_Lifting/Child.jsx';
 import SignUp from './components/SignUp/SignUp.jsx';
 import Toggle from './components/Toggole/Toggole.jsx';
 import FAQS from './components/FAQ/FAQS.jsx';
+import UseEffectExample from './Hooks_useState/useEffect/UseEffectExample.jsx';
+import DataFetch from './DataFetch/DataFetch.jsx';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 function Welcome (){
@@ -60,6 +63,12 @@ function App() {
   const handleChildData = (childData) => {
       console.log(childData);
   }
+
+
+    {/*Tostify notification*/}
+    const handleAddNewTodo = () =>{
+      toast("New todo added Successfully");
+    };
 
   return (
     <>
@@ -188,7 +197,17 @@ function App() {
               {/*FAQ Start*/}
               <h1>FAQ</h1>
               <FAQS />
-             
+
+              {/*useEffect start*/}
+              <UseEffectExample />
+
+              {/*Data Fetch start*/}
+              <DataFetch />
+
+              {/*Reach Tostify*/}
+              <h3>React Tostify (Notification Message)</h3>
+              <button onClick={handleAddNewTodo}>Add new Todo</button>
+             <ToastContainer />
 
 
     </>
