@@ -70,6 +70,9 @@ function App() {
       toast("New todo added Successfully");
     };
 
+    {/*Dynamic and static style*/}
+    const error = false;
+
   return (
     <>
       {/*Logo start*/}
@@ -208,6 +211,14 @@ function App() {
               <h3>React Tostify (Notification Message)</h3>
               <button onClick={handleAddNewTodo}>Add new Todo</button>
              <ToastContainer />
+
+             {/*Dynamic and Static style*/}
+             <h2 style={
+              {
+                color: error ? "red" : "green",
+                backgroundColor: error ? "orange" : "yellow"
+              }
+              }>Dynamic and static style</h2>
 
 
     </>
