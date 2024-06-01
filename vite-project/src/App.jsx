@@ -20,6 +20,7 @@ import FAQS from './components/FAQ/FAQS.jsx';
 import UseEffectExample from './Hooks_useState/useEffect/UseEffectExample.jsx';
 import DataFetch from './DataFetch/DataFetch.jsx';
 import { ToastContainer, toast } from 'react-toastify';
+import UserForm from './components/RefExample/UserForm.jsx';
 
 
 function Welcome (){
@@ -219,6 +220,10 @@ function App() {
                 backgroundColor: error ? "orange" : "yellow"
               }
               }>Dynamic and static style</h2>
+
+              {/*Ref Example*/}
+              <h2>Ref Example</h2>
+              <UserForm />
 
 
     </>
