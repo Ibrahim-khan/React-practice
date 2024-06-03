@@ -11,6 +11,7 @@ export default class UserForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         console.log(this.userNameRef.current.value);
+        
         this.userNameRef.current.style.
         backgroundColor = "green";
     };
